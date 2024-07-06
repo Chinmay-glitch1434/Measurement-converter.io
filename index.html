@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement converter</title>
+</head>
+<body id="body">
+    <h1 id="h1">Measurement converter</h1>
+    <h2 id="h2">Liquid</h2>
+    <h3 id="h3">Measurements: Ml-Mili litre, L-litre</h3>
+    <h2>ML to L</h2>
+    <input type="number" id="mtl" class="ibox">
+    <button id="cnvrt" class="btn" onclick="mltol()">Convert</button>
+    <div id="result">Result: </div>
+    <br>
+    <h2>L to ML</h2>
+    <input type="number" id="ltm" class="ibox">
+    <button id="convrt" class="btn" onclick="ltoml()">Convert</button>
+    <div id="rslt">Result: </div>
+    <br><br><br>
+    <button id="gnxt" class="btn" onclick="gonxt()">Next Measurement</button>
+    <style>
+          body {
+            background-color: rgb(20, 245, 20);
+        }
+        .ibox {
+            background-color: rgb(228, 224, 13);
+        }
+        .btn {
+           background-color: rgb(236, 13, 13);
+            color: yellow;
+        }
+    </style>
+    <script>
+        function mltol() {
+            var convert =  Number(document.getElementById("mtl").value)
+
+            var thousand = convert / 1000;
+
+            document.getElementById("result").innerHTML=thousand; 
+        }
+
+        function ltoml() {
+            var converte =  Number(document.getElementById("ltm").value)
+
+            var thouse = converte * 1000;
+
+            document.getElementById("rslt").innerHTML=thouse; 
+        }
+
+        function gonxt() {
+            window.location = "2index.html";
+        }
+    </script>
+</body>
+</html>

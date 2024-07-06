@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement</title>
+</head>
+<body>
+    <h1 id="h1">Measurement Converter</h1>
+    <h2 id="h2">Distance</h2>
+    <h3 id="h3">Measurements: Centimeters, Meters, Kilometers</h3>
+    <h2>Meters to Kilometers</h2>
+    <input type="number" id="convert" class="ibox">
+    <button class="btn" onclick="mtokm()">Convert</button>
+    <div id="result">Result: </div>
+    <br>
+    <h2>Kilometers to Meters</h2>
+    <input type="number" id="onvert" class="ibox">
+    <button class="btn" onclick="kmtom()">Convert</button>
+    <div id="esult">Result: </div>
+    <br>
+    <h2>Centimeters to Meters</h2>
+    <input type="number" id="nvert" class="ibox">
+    <button class="btn" onclick="cmtom()">Convert</button>
+    <div id="sult">Result: </div>
+    <br>
+    <h2>Meters to Centimeters</h2>
+    <input type="number" id="vert" class="ibox">
+    <button class="btn" onclick="mtocm()">Convert</button>
+    <div id="ult">Result: </div>
+    <br>
+    <h2>Kilometers to Centimeters</h2>
+    <input type="number" id="ert" class="ibox">
+    <button class="btn" onclick="kmtocm()">Convert</button>
+    <div id="lt">Result: </div>
+    <br>
+    <h2>Centimeters to Kilometers</h2>
+    <input type="number" id="rt" class="ibox">
+    <button class="btn" onclick="cmtokm()">Convert</button>
+    <div id="t">Result: </div>
+    <script>
+        function mtokm() {
+            var firstcon = Number(document.getElementById("convert").value);
+
+            var firstrel = firstcon / 1000;
+
+            document.getElementById("result").innerHTML=firstrel;
+        }
+
+        function kmtom() {
+            var secondcon = Number(document.getElementById("onvert").value);
+
+            var secondrel = secondcon * 1000;
+
+            document.getElementById("esult").innerHTML=secondrel;
+        }
+
+        function cmtom() {
+            var thirdcon = Number(document.getElementById("nvert").value);
+
+            var thirdrel = thirdcon / 100;
+
+            document.getElementById("sult").innerHTML=thirdrel;
+        }
+
+        function mtocm() {
+            var fourthcon = Number(document.getElementById("vert").value);
+
+            var fourthrel = fourthcon * 100;
+
+            document.getElementById("ult").innerHTML=fourthrel;
+        }
+
+        function kmtocm() {
+            var fifthcon = Number(document.getElementById("ert").value);
+
+            var fifthrel = fifthcon * 10000;
+
+            document.getElementById("lt").innerHTML=fifthrel;
+        }
+
+        function cmtokm() {
+            var sixthcon = Number(document.getElementById("rt").value);
+
+            var sixthrel = sixthcon / 10000;
+
+            document.getElementById("t").innerHTML=sixthrel;
+        }
+    </script>
+    <style>
+        body {
+          background-color: rgb(20, 245, 20);
+      }
+      .ibox {
+          background-color: rgb(228, 224, 13);
+      }
+      .btn {
+         background-color: rgb(236, 13, 13);
+          color: yellow;
+      }
+  </style>
+</body>
+</html>

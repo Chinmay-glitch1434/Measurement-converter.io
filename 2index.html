@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement</title>
+</head>
+<body id="body">
+    <h1 id="h1">Measurements Converter</h1>
+    <h2 id="h2">Mass</h2>
+    <h3 id="h3">Measurements: Miligrams, Grams, Kilograms</h3>
+    <h2>Grams to Kilograms</h2>
+    <input type="number" id="covrt" class="ibox">
+    <button id="gtokgcn" class="btn" onclick="gtokg()">Convert</button>
+    <div id="reslt">Result: </div>
+    <br>
+    <h2>Kilograms to Grams</h2>
+    <input type="number" id="convrt" class="ibox">
+    <button id="kgtogcn" class="btn" onclick="kgtog()">Convert</button>
+    <div id="rslt">Result: </div>
+    <br>
+    <h2>Grams to Miligrams</h2>
+    <input type="number" id="covert" class="ibox">
+    <button id="gtomgcn" class="btn" onclick="gtomg()">Convert</button>
+    <div id="rst">Result: </div>
+    <br>
+    <h2>Miligrams to Grams</h2>
+    <input type="number" id="crt" class="ibox">
+    <button id="mgtogcn" class="btn" onclick="mgtog()">Convert</button>
+    <div id="relt">Result: </div>
+    <br>
+    <h2>Kilograms to Miligrams</h2>
+    <input type="number" id="covt" class="ibox">
+    <button id="kgtomgcn" class="btn" onclick="kgtomg()">Convert</button>
+    <div id="rlt">Result: </div>
+    <br>
+    <h2>Miligrams to Kilograms</h2>
+    <input type="number" id="cvrt" class="ibox">
+    <button id="mgtokgcn" class="btn" onclick="mgtokg()">Convert</button>
+    <div id="rt">Result: </div>
+    <br><br><br>
+    <button class="btn" onclick="gonxt()">Next Measurement</button>
+    <script>
+        function gtokg() {
+            var firstcon = Number(document.getElementById("covrt").value);
+
+            var firstrel = firstcon / 1000;
+
+            document.getElementById("reslt").innerHTML=firstrel;
+        }
+
+        function kgtog() {
+            var secondcon = Number(document.getElementById("convrt").value);
+
+            var secondrel = secondcon * 1000;
+
+            document.getElementById("rslt").innerHTML=secondrel;
+        }
+
+        function gtomg() {
+            var thirdcon = Number(document.getElementById("covert").value);
+
+            var thirdrel = thirdcon * 1000;
+
+            document.getElementById("rst").innerHTML=thirdrel;
+        }
+
+        function mgtog() {
+            var fourthcon = Number(document.getElementById("crt").value);
+
+            var fourthrel = fourthcon / 1000;
+
+            document.getElementById("relt").innerHTML=fourthrel;
+        }
+
+        function kgtomg() {
+            var fifthcon = Number(document.getElementById("covt").value);
+
+            var fifthrel = fifthcon * 1000000;
+
+            document.getElementById("rlt").innerHTML=fifthrel;
+        }
+
+        function mgtokg() {
+            var sixthcon = Number(document.getElementById("cvrt").value);
+
+            var sixthrel = sixthcon / 1000000;
+
+            document.getElementById("rt").innerHTML=sixthrel;
+        }
+
+        function gonxt() {
+            window.location = "3index.html";
+        }
+    </script>
+     <style>
+        body {
+          background-color: rgb(20, 245, 20);
+      }
+      .ibox {
+          background-color: rgb(228, 224, 13);
+      }
+      .btn {
+         background-color: rgb(236, 13, 13);
+          color: yellow;
+      }
+  </style>
+</body>
+</html>
